@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adocao | Home</title>
+    <link rel="stylesheet" href="../public/css/pagina_home.css">
+    <link rel="stylesheet" href="../public/css/pagina_calculadora.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img id="logo" src="../public/assets_adocao/ADOCÃO (1).png">
+            <ul class="navbar">
+                <a class="botao_home" href="Pagina_Home.html"><i class="fa-solid fa-home" ></i></a>
+                <a class="botao_calculadora" href="Calculadora.html"><i class="fa fa-solid fa-calculator"></i></a>
+                <a class="botao_cadastro" href="Cadastro.html"><i class="fa-solid fa-sign-in"></i></a>
+                <a class="botao_login" href="Login.html"><i class="fa-solid fa-user"></i></a>
+                </a>
+            </ul>
+        </div>
+    </div>
+    
+
+
+    
+
+
+    <div class="calculadora">
+        <div class="container7">
+            <div class="formulario_calculadora">
+                <h4 class="titulo_calculadora">Simulador de Gastos</h4>
+                <h4 class="titulo_input ">Renda Salarial</h4>
+                <input class="inputs" type="number" id="input_renda_fixa">
+                <h4 class="titulo_input">Horas Livres</h4>
+                <input class="inputs" type="number" id="input_horas_livres">
+                <button class="button_calculadora" onclick="calcular_gastos()">Calcular</button>
+            </div>
+            <div class="container_texto">        
+                <div class="texto_titulo_calculadora">
+                <h2>Simule seus gastos</h2>
+                <div class="texto_calculadora">
+                    <h4>
+                        Ter um cão é o sonho de muita gente pequena ou grande. 
+                        Quem já viveu a experiência sabe o prazer que é ter um amiguinho de quatro patas em casa.
+                        No entanto, o ente canino requer cuidados e atenção, 
+                        além de incluir uma série de custos para garantir seu bem estar. 
+                        É fundamental lembrar que ter um animal é maravilho, mas, como quase tudo, 
+                        o benefício tem um custo que vai além de tempo e cuidado – que são os gastos financeiros. 
+                        Portanto, pense bem antes de comprar ou adotar, pois nem todos tem o bolso preparados para tal decisão.  
+                    </h4>
+                </div>
+            </div>
+    
+        </div>        
+    </div>
+    </div>
+    
+
+    <div  class="container_texto2">        
+        <div class="texto2_titulo_calculadora">
+        <h2>Porte Grande</h2>
+        <div id="resposta_grande_porte" class="texto2_calculadora">
+    
+        </div>
+    </div>
+
+</div>  
+
+
+
+<div  class="container_texto3">        
+    <div class="texto3_titulo_calculadora">
+    <h2>Porte Médio</h2>
+    <div id="resposta_medio_porte" class="texto3_calculadora">
+    </div>
+</div>
+
+</div>  
+
+
+<div  class="container_texto4">        
+    <div class="texto4_titulo_calculadora">
+    <h2>Porte Pequeno</h2>
+    <div id="resposta_pequeno_porte" class="texto4_calculadora">
+    </div>
+</div>
+
+</div>  
+
+<div class="footer">
+    <div class="container4">
+        <span>CopyRight @ AdoCão 2023</span>
+
+    </div>
+
+</div>
+
+<script>
+
+
+    function calcular_gastos(){
+        var renda_fixa = Number (input_renda_fixa.value);
+        var horas_livre = Number (input_horas_livres.value);
+
+    resposta_grande_porte.innerHTML = ``
+    resposta_medio_porte.innerHTML = ``
+    resposta_pequeno_porte.innerHTML = ``
+    
+
+    resposta_pequeno_porte.innerHTML = `O cão adulto de pequeno porte se alimenta duas vezes ao dia com 
+    50g de ração, totalizando 1500g mensais. Diante disso, um pacote de ração de ração 3Kg custa em média 
+    R$50,00 e dura em torno de 2 meses, logo nosso custo mensal de ração é de R$25,00.
+    Os veterinários indicam para a maior parte das raças de pequeno porte um 
+    banho por semana, que custa, em média, R$30,00, totalizando R$120,00 mensais. 
+    Além do banho e da ração, reservar uma verba de R$ 50 por mês é recomendável 
+    para eventuais as idas ao veterinário e gastos com saúde
+    Dessa forma, o cão de pequeno porte possui um gasto mensal de R$195,00.`
+
+
+    resposta_medio_porte.innerHTML = `Um cão de porte médio consome 300g por dia, ou seja, 9Kg de ração por mês. 
+    Considerando o preço do quilo para este porte,  o total mensal fica em aproximadamente R$ 70,00
+    Recomenda-se dois banhos por mês, e nesse porte cada banho 
+    sai em média R$50,00; logo, o dispêndio mensal com higiene fica 
+    torno de R$100,00. No total, levando em conta os R$ 50 para saúde, 
+    a média mensal de um cão desse tipo aproximadamente  R$220,00.`
+
+    resposta_grande_porte.innerHTML += `Já os cães de grande porte, que pesam mais de 50kg, 
+    consomem 500g de ração por dia, ou um saco de 15Kg de ração por mês. 
+    Nesse caso o gasto fica por R$100,00. Para seguir a recomendação de um banho por mês, 
+    o dono irá gastar R$100,00 por conta do porte do animal e do tempo demandado para os cuidados. 
+    Logo, os cutos mensais, também, incluindo os gastos com saúde, totalizam R$ 250,00. `
+
+    }
+
+
+</script>
