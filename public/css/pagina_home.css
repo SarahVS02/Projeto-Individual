@@ -1,8 +1,7 @@
 body{
-    background-color: rgb(239, 198, 151);
+    background-color: #efc697;
     background: rgb(239, 198, 151) transparent;
     background: rgba(239, 198, 151, 0.8);
-    
     margin: 0;
     padding: 0;
 }
@@ -17,7 +16,7 @@ body{
     margin: 25px;
     width: 200px;
     height: 50px;
-    margin-left: 42%;
+    margin-left: 500px;
     margin-bottom: 25px;
 
 }
@@ -64,7 +63,7 @@ body{
 
 .botao_home:hover{
  
-    color: #512ba5;
+    color: rgba(137, 74, 0);
     transition: 0.5s;
 }
 
@@ -79,7 +78,7 @@ body{
 
 .botao_cadastro:hover{
  
-    color: #512ba5;
+    color: rgba(137, 74, 0);
     transition: 0.5s;
 }
 
@@ -94,9 +93,8 @@ body{
 
 .botao_calculadora:hover{
  
-    color: #512ba5;
-    transition: 0.5s;
-}
+    color: rgba(137, 74, 0);
+    transition: 0.5s;}
 
 
 .botao_login{
@@ -110,7 +108,22 @@ body{
 
 .botao_login:hover{
  
-    color: #512ba5;
+    color: rgba(137, 74, 0);
+    transition: 0.5s;
+}
+
+.botao_suporte{
+    display: flex;
+    padding: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.botao_suporte:hover{
+ 
+    color: rgba(137, 74, 0);
     transition: 0.5s;
 }
 
@@ -129,7 +142,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     margin-left: 45px;
     color: #F1D7FF;
-    font-size: 2.5vmax;
+    font-size: 250px;
     margin-top: 25px;
 
 }
@@ -143,15 +156,14 @@ body{
 
 /*Fim da Header*/
 
-.banner{
-    display: flex;
+.banner{    display: flex;
 
     background-image: url(../assets_adocao/Good\ doggy-cuate.png);
     background-size: cover;
     border-radius: 75px;
-    width: 650px;
-    height: 653px;
-    margin-top: 5px;
+    width: 450px;
+    height: 470px;
+    margin:20px;
     
     
 
@@ -160,19 +172,19 @@ body{
 .conxteto{
 
     display: flex;
-    width: 100%;
-    height: 1000px;
+    width: 150px;
+    height: 500px;
     margin: 10px;
     margin-bottom: 350px;
     margin-right: 450px;
-
+    align-items: center;
 }
 
 
 .banner .container1{
 
     display: flex;
-    width: 100%;
+    width: 150px;
     justify-content: center;
 
 
@@ -187,70 +199,66 @@ body{
     margin-top: 85px;
 }
 
+
+
 .titulo_contexto{
 
     font-family: 'Quicksand', sans-serif;
-    font-size: 2.5vmax;
-    color: #000;
-    margin-top: 150px;
+    font-size: 30px;
+    color: #062C2D;
     display: flex;
-    justify-content: center;
-    text-align: center;
     width: 550px;
     overflow-wrap: break-word;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    margin-left: 25px;
-
-   
-
-}
-
-.texto{
-
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.7vmax;
-    color: #000;
-    width: 500px;
-    justify-content: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    display: flex;
-    flex-direction: row-reverse;
-    margin-left: 25px;
-
+    text-align:left;
+    font-weight: bolder;
+ 
 
 }
 
-.texto1{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.7vmax;
-    color: #000;
-    width: 500px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-   }
 
    
 .container2{
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    height: 900px;
-    background-color: #894a00;
+    height: 670px;
     background: rgb(137, 74, 0) transparent;
     background: rgba(137, 74, 0, 0.4);
+    justify-content: space-between;
+    border-radius: 25px;
+    border-style:solid;
+    border-width: 5px;
+    border-color:#062C2D;
+    margin: -10px;
     
+    
+}
+
+.titulo_textinhos{
+
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color: #062C2D;
+    font-size: 35px;
+
+}
+
+.texto{
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #000;
+    width: 400px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align:left;
 
 
 }
@@ -276,11 +284,9 @@ body{
     display: flex;
     flex-direction: row;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 200px;
-    margin-top: 150px;
-    justify-content: space-between;
+    font-size: 20px;
     justify-content: space-around;
-    text-align: center;
+    margin-top: 10px;
 
 }
 
@@ -290,7 +296,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    margin: 10px;
 }
 
 .banner2{
@@ -299,9 +305,9 @@ body{
     background-image: url(../assets_adocao/Adopt\ a\ pet-pana.png);
     background-size: cover;
     border-radius: 75px;
-    width: 350px;
-    height: 370px;
-    margin-top: 50px; 
+    width: 250px;
+    height: 270px;
+    margin-left: 50px;
 }
 
 .banner3{
@@ -310,11 +316,10 @@ body{
     background-image: url(../assets_adocao/Adopt\ a\ pet-amico.png);
     background-size: cover;
     border-radius: 75px;
-    width: 350px;
-    height: 370px;
-    margin-top: 50px; 
-    margin-left: 150px; 
-    margin-right: 150px; 
+    width: 250px;
+    height: 270px;
+    margin: 10px;
+
   
 }
 
@@ -324,118 +329,159 @@ body{
     background-image: url(../assets_adocao/Dog\ walking-bro.png);
     background-size: cover;
     border-radius: 75px;
-    width: 350px;
-    height: 370px;
-    margin-top: 50px; 
-    margin-right: 150px; 
-    margin-right: 150px; 
-    
+    width: 250px;
+    height: 270px;
+    margin-right: 130px;
+   
 }
 
 .titulo_saiba_mais{
 
     font-family: 'Quicksand', sans-serif;
-    font-size: 2.5vmax;
+    font-size: 250px;
     color: #000;
     margin-top: 150px;
     text-align: center;
 
 }
 
-.texto2{
-
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1vmax;
-    color: #000;
-    width: 300px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    text-align:center;
-
-}
 
 
 .texto3{
 
     display: flex;
+    flex-direction: column;
     font-family: 'Quicksand', sans-serif;
-    font-size: 1vmax;
-    color: #fff;
-    width: 300px;
+    font-weight: bolder;
+    font-size: 17.5px;
+    color: #062C2D;
+    width: 250px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    margin-right: 150px;
-
+    text-align: justify;
+    
 }
+
+.botao_adocao_responsavel{
+    
+    font-size: small;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: rgb(6, 44, 45);
+    color: white;
+    font-weight: bold;
+    background: rgb(6, 44, 45, 0.7);
+    width: 150px;
+    height: 60px;
+    margin: 15px;
+}
+
+
+.botao_adocao_responsavel:hover{
+    
+    background-color:#efc697;
+    border-width: 2.5px;
+    border-style: solid;
+    color: #062C2D;
+    border-color: #062C2D;
+    transition: 0.5s;
+}
+    
+    
+
 
 .texto4{
 
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1vmax;
-    color: #fff;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 17.5px;
+    color: #062C2D;
+    width: 250px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    margin-right: 150px;
+    text-align: justify;
+
+}
+
+.botao_abandono_em_alta{
+    
+    font-size: small;
+    border-radius: 30px;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: rgb(6, 44, 45);
+    color: white;
+    font-weight: bold;
+    background: rgb(6, 44, 45, 0.7);
+    width: 150px;
+    height: 60px;
+    margin: 15px;
+}
+
+
+.botao_abandono_em_alta:hover{
+    
+    background-color:#efc697 ;
+    color: #062C2D;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #062C2D;
+    transition: 0.8s;
 }
 
 
 .texto5{
-
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1vmax;
-    color: #fff;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 17.5px;
+    color: #062C2D;
+    width: 250px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    margin-right: 150px;
+    text-align: justify;
+
+
 }
 
-
-.botao_saiba_mais {
-    color: #000;
-    margin-bottom: 20px;
+.botao_cuidados_importantes{
+    
     font-size: small;
-    text-decoration: none;
-    opacity: 0.9;
-    padding: 1rem;
+    border-radius: 30px;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: rgb(6, 44, 45);
+    color: white;
+    font-weight: bold;
+    background: rgb(6, 44, 45, 0.7);
+    width: 150px;
+    height: 60px;
+    margin: 15px;
 }
 
 
-.botao_saiba_mais :hover{
-    opacity: 1;
-    transition: 0.6s;
-    text-decoration: underline;
-    opacity: 1;
+.botao_cuidados_importantes:hover{
+    
+    background-color:#efc697 ;
+    color: #062C2D;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #062C2D;
+    transition: 0.8s;
 }
-
-
-.container3 .botao_saiba_mais{
-    height: 55px;
-    width: 250px;
-    background-color: #062C2D;
-    color: whitesmoke;
-    font-size: 25px;
-    font-weight: bolder;
-    border: none;
-    border-radius: 85px;
-    cursor: pointer;
-    align-self: center;
-    margin-top: 20px;
-    opacity: 0.9;
-}
-
-
 
   .conxteto2{
 
     display: flex;
     width: 100%;
-    height: 1000px;
+    height: 100px;
     margin: 10px;
     margin-bottom: 350px;
     margin-right: 450px;
@@ -446,7 +492,7 @@ body{
 .banner5 .container3{
 
     display: flex;
-    width: 100%;
+    width: 150px;
     justify-content: center;
 
 
@@ -458,25 +504,28 @@ body{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-top: 85px;
 }
 
-
-
+.conxteto2{
+    
+    display: flex;
+    justify-content: center;
+   
+}
 .texto6{
 
-    font-family:Georgia, monospace;
-    font-size: 1.7vmax;
-    color: #000;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color:#062C2D;
     width: 500px;
     justify-content: center;
-    text-align: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
     display: flex;
     flex-direction: row-reverse;
-    margin-left: 25px;
 
 
 }
@@ -484,20 +533,42 @@ body{
 .texto7{
 
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-
-    
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.7vmax;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
     color: #000;
     width: 500px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    text-align: justify;
+   margin: 15px;
+}
+
+.botao_simule_gastos {
+    font-size: small;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: rgb(6, 44, 45);
+    color: white;
+    font-weight: bold;
+    background: rgb(6, 44, 45, 0.7);
+    width: 150px;
+    height: 60px;
+    margin: 15px;
+}
+
+
+.botao_simule_gastos:hover{
    
-
-
+    background-color:#efc697 ;
+    color: #062C2D;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #062C2D;
+    transition: 0.8s;
 }
 
 .banner5{
