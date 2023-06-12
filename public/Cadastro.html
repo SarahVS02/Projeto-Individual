@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pagina_cadastro.css">
+    <link rel="stylesheet" href="../public/css/pagina_home.css">
+    <link rel="stylesheet" href="../public/css/pagina_cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,16 +18,24 @@
 <body>
     <div class="header">
         <div class="container">
-            <img id="logo" src="../assets_adocao/ADOCÃO (1).png">
+            <img id="logo" src="../public/assets_adocao/ADOCÃO (1).png">
             <ul class="navbar">
-                <a class="botao_home" href="Pagina_Home.html"><i class="fa-solid fa-home" ></i></a>
-                <a class="botao_calculadora" href="Calculadora.html"><i class="fa fa-solid fa-calculator"></i></a>
-                <a class="botao_cadastro" href="Cadastro.html"><i class="fa-solid fa-sign-in"></i></a>
-                <a class="botao_login" href="Login.html"><i class="fa-solid fa-user"></i></a>
-                </a>
-            </ul>
-        </div>
-    </div>
+                <a class="botao_home" href="Pagina_Home.html"><i
+                        class="fa-solid fa-home"></i></a>
+                <a class="botao_calculadora" href="Calculadora.html"><i
+                        class="fa fa-solid fa-calculator"></i></a>
+                <a class="botao_cadastro" href="Cadastro.html"><i
+                        class="fa-solid fa-user"></i></a>
+                <a class="botao_login" href="Login.html"><i
+                        class="fa-solid fa-sign-in"></i></a>
+            </a>
+            <a class="botao_suporte"
+                href="https://app.pipefy.com/public/form/ASnqtS0i"><i
+                    class="fa-solid fa-headset"></i></a>
+        </a>
+    </ul>
+</div>
+</div>
 
     <div class="cadastro">
         <div class="container5">
@@ -72,20 +81,37 @@
         var nomeVar = input_nome.value;
         var emailVar = input_email.value;
         var senhaVar = input_senha.value;
-        var confirmacaoSenhaVar = conf_senha_input.value;
+        var confirmacaoSenhaVar = input_conf_senha.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+           
+            alert ("Mensagem de erro para todos os campos em branco");
 
            
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
+            
+        }else if ((emailVar.indexOf("@") < 0) || (!emailVar.indexOf(".com") < 0)) {
+
+            alert ("Email precisa conter @ e .com ");
+
+        }else if (senhaVar.length < 8){
+
+            alert ("A senha precisa ter no minimo 8  caracteries!");
+
+        }else if(senhaVar != confirmacaoSenhaVar){
+
+            alert ("As duas senhas precisam ser iguais!");
+
+            }else {
+            
+            alert("Cadastro Realizado com sucesso! ")
+            window.location.href = "Login.html";
+
         }
 
-        // Enviando o valor da nova input
+    }
+
+        
+        /*// Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
@@ -122,12 +148,11 @@
         });
 
         return false;
-    }
+    
 
     function sumirMensagem() {
         cardErro.style.display = "none"
-    }
+    }*/
 
-</script>
 
 </script>

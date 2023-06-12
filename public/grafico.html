@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    
+    <div>
+        <canvas id="TempUmid"></canvas>
+        <canvas id="TempUmid2"></canvas>
+    </div>
+      
+
+</body>
+</html>
+<script>
+
+
+const ctx = document.getElementById('TempUmid');
+
+var Grafico1 = new Chart(ctx, {
+    type: 'bar', // tipo do gráfico
+    data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'], // rótulos dos meses
+        datasets: [{
+            label: 'Temperatura', // rótulo das barras de temperatura
+            data: [22, 24, 27, 23, 20, 18 ], // valores da temperatura
+            backgroundColor: 'dodgerblue', // cor das barras de temperatura
+        }, {
+            label: 'Umidade', // rótulo das barras de umidade
+            data: [90, 89, 93, 87, 88, 82], // valores da umidade
+            backgroundColor: 'darkred', // cor das barras de umidade
+        }]
+    },
+});
+
+    
+const ctx2 = document.getElementById('TempUmid2');
+
+    var grafico2 = new Chart(ctx2, {
+    type: 'line', // tipo do gráfico
+    data: {
+        labels: ['13:00', '14:00', '15:00', '15:00', '16:00', '17:00'], // rótulos dos meses
+        datasets: [{
+            label: 'Temperatura', // rótulo da linha
+            data: [30, 29, 28, 25, 22, 23], // valores da temperatura
+            borderColor: 'dodgerblue', // cor da linha
+        
+        }, {  label: 'Umidade', // rótulo das barras de umidade
+            data: [80, 82, 80, 85, 80, 83], // valores da umidade
+            borderColor: 'darkred', // cor das barras de umidade
+       
+
+            
+        
+        }]
+    },
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
