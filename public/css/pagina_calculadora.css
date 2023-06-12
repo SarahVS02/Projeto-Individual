@@ -7,6 +7,7 @@
     background: rgb(6, 44, 45) transparent;
     background: rgba(6, 44, 45, 0.3);
     border-radius: 25px;
+    margin-bottom: 40px;
     
 
 }
@@ -29,81 +30,9 @@ font-family: 'Quicksand', sans-serif;
     overflow-wrap: break-word;
     word-wrap: break-word;
 
-}
-
-.container_texto2{
-    
-    display: flex;
-    justify-content: center;
-    margin-top: -160px;
-    margin-right: 45px;
-    background: rgb(6, 44, 45) transparent;
-    background: rgba(6, 44, 45, 0.7);
-    border-radius: 25px;
-    width: 525px;
-    margin-left: 170px;
-    margin-bottom: 180px;
-}
-
-
-.texto2_titulo_calculadora{
-
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 10px;
-    color: beige;
-}
-
-.texto2_calculadora{
-
-    
-    font-family: 'Quicksand', sans-serif;
-    font-size: 15px;
-    width: 500px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    color: beige;
 
 }
 
-
-.container_texto3{
-    
-    display: flex;
-    justify-content: center;
-    margin-top: -160px;
-    margin-right: 45px;
-    background: rgb(6, 44, 45) transparent;
-    background: rgba(6, 44, 45, 0.7);
-    border-radius: 25px;
-    width: 525px;
-    margin-left: 170px;
-    margin-bottom: 180px;
-
-}
-
-
-.texto3_titulo_calculadora{
-
-    font-size: 20px;
-    font-weight: 800;
-    margin: 10px;
-    color: beige;
-}
-
-.texto3_calculadora{
-
-    
-    font-family: 'Quicksand', sans-serif;
-    font-size: 15px;
-    font-weight: lighter;
-    width: 500px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    color: beige;
-
-}
 
 
 .container_texto4{
@@ -113,7 +42,7 @@ font-family: 'Quicksand', sans-serif;
     margin-top: -160px;
     margin-right: 45px;
     background: rgb(6, 44, 45) transparent;
-    background: rgba(6, 44, 45, 0.7);
+    background: rgba(6, 44, 45, 0.4);
     border-radius: 25px;
     width: 525px;
     margin-left: 170px;
@@ -126,9 +55,9 @@ font-family: 'Quicksand', sans-serif;
 
 font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: bolder;
     margin: 10px;
-    color: beige;
+    color:#062C2D;
 }
 
 .texto4_calculadora{
@@ -139,13 +68,15 @@ font-family: 'Quicksand', sans-serif;
     width: 500px;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    color: beige;
+    color: black;
+    font-weight: bold;
 
 }
 
 .calculadora{
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 0%;
@@ -173,7 +104,7 @@ font-family: 'Quicksand', sans-serif;
 .formulario_calculadora{
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 100px;
-    background-color: rgb(137, 74, 0);
+    background-color: #894a00;
     background: rgb(137, 74, 0) transparent;
     background: rgba(137, 74, 0, 0.4);
     height: 350px;
@@ -256,3 +187,19 @@ margin-right: 15px;
     margin-top: 20px;
     opacity: 0.9;
 }
+
+
+
+.resposta_calculadora{
+    
+    color: beige;
+    margin: 20px;
+    
+}
+
+
+
+
+
+
+        
