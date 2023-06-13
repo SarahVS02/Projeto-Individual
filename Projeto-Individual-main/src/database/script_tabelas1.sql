@@ -1,0 +1,19 @@
+CREATE DATABASE Adocao;
+
+USE Adocao;
+
+CREATE TABLE Usuario(
+IdUsuario INT PRIMARY KEY AUTO_INCREMENT,
+Nome VARCHAR(45),
+Email VARCHAR(45),
+Senha CHAR(8)
+);
+
+CREATE TABLE PontosQuiz(
+IdQuiz INT PRIMARY KEY AUTO_INCREMENT,
+Acertos INT,
+Erros INT,
+fkUsuario INT,
+CONSTRAINT fkUsuario_quiz FOREIGN KEY (fkUsuario) REFERENCES Usuario(IdUsuario)
+);
+

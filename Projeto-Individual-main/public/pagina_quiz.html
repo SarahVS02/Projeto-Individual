@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adocao | Home</title>
+        <link rel="stylesheet" href="../public/css/pagina_home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="container">
+                <img id="logo" src="../public/assets_adocao/ADOCÃO (1).png">
+                <ul class="navbar">
+                    <a class="botao_home" href="Pagina_Home.html"><i
+                            class="fa-solid fa-home"></i></a>
+                    <a class="botao_calculadora" href="Calculadora.html"><i
+                            class="fa fa-solid fa-calculator"></i></a>
+                    <a class="botao_cadastro" href="Cadastro.html"><i
+                            class="fa-solid fa-user"></i></a>
+                    <a class="botao_login" href="Login.html"><i
+                            class="fa-solid fa-sign-in"></i></a>
+                    <a class="botao_suporte"
+                        href="https://app.pipefy.com/public/form/ASnqtS0i"><i
+                            class="fa-solid fa-headset"></i></a>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <button id="iniciar_quiz" onclick="iniciar_quiz()">Iniciar Quiz</button>
+
+    <div id="div_mostrar_perguntas"></div>
+
+    <div id="div_mostrar_pontos"></div>
+
+   
+
+    <div class="footer">
+        <div class="container4">
+            <span>CopyRight @ AdoCão 2023</span>
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+var lista_perguntas = [`<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Qual a fruta toxicá para cachorros?</h4>
+                <button onclick="certa()">Morango</button>    
+                <button onclick="errada()">Banana</button>    
+                <button onclick="errada()">Maçã</button>    
+                <button onclick="errada()">Manga</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Os dentes dos filhotes de cães começam a aparecer em:</h4>
+                <button onclick="errada()">Um mês</button>    
+                <button onclick="certa()">3 semanas</button>    
+                <button onclick="errada()">Uma semana</button>    
+                <button onclick="errada()">3 meses</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Geralmente, a boca de um cão tem menos bactérias e germes do que a boca de um:</h4>
+                <button onclick="errada()">Passaro</button>    
+                <button onclick="errada()">Gato</button>    
+                <button onclick="errada()">Coelho</button>    
+                <button onclick="certa()">Humano</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+                <div class="formulario_quiz">
+                <h4 class="questao">Com quantos anos em média uma cadela entra no cio?</h4>
+                <button onclick="errada()">02 meses</button>    
+                <button onclick="certa()">06 - 09 meses</button>    
+                <button onclick="errada()">01 - 03 anos</button>    
+                <button onclick="errada()">08 - 10 meses</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Em média quantos anos vive um cachorro?</h4>
+                <button onclick="certa()">10 - 13 anos</button>    
+                <button onclick="errada()">06 - 09 meses</button>    
+                <button onclick="errada()">6 - 15 anos</button>    
+                <button onclick="errada()">25 - 30 anos</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Quais são as doenças comuns nos cães da raça Pinscher?</h4>
+                <button onclick="errada()">Hepatite e Rabiose</button>
+                <button onclick="errada()">Cinomose e pavorvirose</button>    
+                <button onclick="certa()">Catarata e tremedeira</button>    
+                <button onclick="errada()"> Cirrose e Reumatismo</button>    
+            </div>
+        </div>
+    </div>
+    `,
+    `<div id="container_quiz" class="container_quiz">
+            <div class="formulario_quiz">
+                <h4 class="questao">Qual a fruta toxicá para cachorros?</h4>
+                <button onclick="certa()">Morango</button>    
+                <button onclick="errada()">Banana</button>    
+                <button onclick="errada()">Maçã</button>    
+                <button onclick="errada()">Manga</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Os dentes dos filhotes de cães começam a aparecer em:</h4>
+                <button onclick="errada()">Um mês</button>    
+                <button onclick="certa()">3 semanas</button>    
+                <button onclick="errada()">Uma semana</button>    
+                <button onclick="errada()">3 meses</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Geralmente, a boca de um cão tem menos bactérias e germes do que a boca de um:</h4>
+                <button onclick="errada()">Passaro</button>    
+                <button onclick="errada()">Gato</button>    
+                <button onclick="errada()">Coelho</button>    
+                <button onclick="certa()">Humano</button>    
+            </div>
+        </div>
+    </div>`,
+    `<div id="container_quiz" class="container_quiz">
+        <div class="content">
+            <div class="formulario_quiz">
+                <h4 class="questao">Com quantos anos em média uma cadela entra no cio?</h4>
+                <button onclick="errada()">02 meses</button>    
+                <button onclick="certa()">06 - 09 meses</button>    
+                <button onclick="errada()">01 - 03 anos</button>    
+                <button onclick="errada()">08 - 10 meses</button>    
+            </div>
+        </div>
+    </div>`,
+    
+    `<button onclick="finalizar_quiz()">Finalizar Quiz</button>`
+
+    ]
+
+
+var pergunta_atual = `` 
+var resp_certa  = 0
+var resp_errada = 0
+var pontos = 0
+var container_quiz = document.getElementById("div_mostrar_perguntas")
+var botao_iniciar_quiz = document.getElementById("iniciar_quiz")    
+
+        function iniciar_quiz(){
+            botao_iniciar_quiz.style.display = "none"
+
+        for(var i = 0; i < lista_perguntas.length; i++){
+
+            pergunta_atual += lista_perguntas[i]
+
+            
+        }
+
+        div_mostrar_perguntas.innerHTML += `${pergunta_atual}`
+
+       
+    }
+
+
+    function certa(){
+
+    resp_certa += 1 
+    
+}
+
+    function errada(){
+
+    resp_errada += 1
+}
+
+        function finalizar_quiz(){
+            container_quiz.style.display = "none"
+
+            pontos = (resp_certa * 50)
+        
+    mostrar_pontos()
+}
+
+function mostrar_pontos(){
+    div_mostrar_pontos.innerHTML = `<div class="contagemDePontos">
+        <div class="resumoPerguntas">
+            <div class="perguntasAcertos">
+                <h4>Você acertou</h4>
+                <span>${resp_certa}</span> 
+                <h4>Perguntas</h4>
+            </div>
+            <div class="perguntasErros">
+                <h4>Pontos</h4>
+                <span>${(resp_certa * 50)}</span> 
+             </div>
+        </div>
+
+          <div class="graficoEtxt">
+        <div class="graficoTxt">
+          <h4>Resumo</h4>
+        </div>
+        <div class="grafico">
+            <canvas id="TempUmid"></canvas>
+         <canvas id="TempUmid2"></canvas>
+        </div>
+    </div>
+  </div>
+    `
+
+
+    const ctx = document.getElementById('TempUmid');
+
+var Grafico1 = new Chart(ctx, {
+    type: 'bar', // tipo do gráfico
+    data: {
+        labels: ['Resultado'], // rótulos dos meses
+        datasets: [{
+            label: 'Acertos', // rótulo das barras de temperatura
+            data: [resp_certa ], // valores da temperatura
+            backgroundColor: 'dodgerblue', // cor das barras de temperatura
+        }, {
+            label: 'Erros', // rótulo das barras de umidade
+            data: [resp_errada], // valores da umidade
+            backgroundColor: 'darkred', // cor das barras de umidade
+        }]
+    },
+});
+
+    
+const ctx2 = document.getElementById('TempUmid2');
+
+    var grafico2 = new Chart(ctx2, {
+    type: 'line', // tipo do gráfico
+    data: {
+        labels: ['13:00', '14:00', '15:00', '15:00', '16:00', '17:00'], // rótulos dos meses
+        datasets: [{
+            label: 'Temperatura', // rótulo da linha
+            data: [30, 29, 28, 25, 22, 23], // valores da temperatura
+            borderColor: 'dodgerblue', // cor da linha
+        
+        }, {  label: 'Umidade', // rótulo das barras de umidade
+            data: [80, 82, 80, 85, 80, 83], // valores da umidade
+            borderColor: 'darkred', // cor das barras de umidade
+       
+
+            
+        
+        }]
+    },
+});
+
+
+}
+
+ 
+
+
+</script>
